@@ -1,0 +1,86 @@
+{
+  "expo": {
+    "name": "Sem Mimo",
+    "slug": "sem-mimo",
+    "version": "1.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0A0A0F"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.moisesquibuba.semmimo",
+      "infoPlist": {
+        "NSPhotoLibraryAddUsageDescription": "Salvar e acessar imagens para personalizar suas frases.",
+        "NSPhotoLibraryUsageDescription": "Acessar sua galeria para adicionar imagens às frases.",
+        "NSCameraUsageDescription": "Tirar fotos para usar como fundo das frases."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0A0A0F"
+      },
+      "package": "com.seunome.mentalidadedeaco",
+      "permissions": [
+        "android.permission.RECEIVE_BOOT_COMPLETED",
+        "android.permission.VIBRATE",
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.READ_MEDIA_IMAGES",
+        "android.permission.READ_MEDIA_VIDEO",
+        "android.permission.READ_MEDIA_AUDIO",
+        "android.permission.READ_MEDIA_VISUAL_USER_SELECTED",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#C9A84C",
+          "defaultChannel": "mentalidade-manha"
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Salvar frases como imagem na sua galeria.",
+          "savePhotosPermission": "Salvar frases como imagem na sua galeria."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Permitir acesso à galeria para adicionar imagens às suas frases.",
+          "cameraPermission": "Permitir acesso à câmera para tirar fotos para as frases."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "scheme": "mentalidadedeaco",
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "cadcd738-1d72-40ec-b0f1-2c575c4f0863"
+      }
+    }
+  }
+}
